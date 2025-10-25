@@ -7,6 +7,15 @@ bool isPyth(unsigned a, unsigned b, unsigned c) {
 	return x;
 }
 
+bool OverFlow(unsigned a, unsigned b, unsigned c) {
+	const unsigned MAX = 4294967295U;
+	if ((a > 0 && a > MAX / a) ||
+		(b > 0 && b > MAX / b) ||
+		(c > 0 && c > MAX / c)) {
+		std::cerr << "OverFlow\n";
+		return true;
+	}
+
 int main()
 {
 	using u_t = unsigned;
