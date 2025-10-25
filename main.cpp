@@ -15,6 +15,21 @@ bool OverFlow(unsigned a, unsigned b, unsigned c) {
 		std::cerr << "OverFlow\n";
 		return true;
 	}
+	unsigned a2 = a * a;
+	unsigned b2 = b * b;
+	unsigned c2 = c * c;
+	if (a2 > MAX - b2) {
+		std::cerr << "OverFlow\n";
+		return true;
+	}
+	unsigned ab_sum = a2 + b2;
+	if (ab_sum > MAX - c2) {
+		std::cerr << "OverFlow\n";
+		return true;
+	}
+
+	return false;
+}
 
 int main()
 {
