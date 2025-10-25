@@ -38,6 +38,9 @@ int main()
 	std::cin >> c >> b;
 	size_t count = 0;
 	while (std::cin >> a) {
+		if (OverFlow(a, b, c)) {
+			return 2;
+		}
 		count += isPyth(a, b, c) ? 1 : 0;
 		c = b;
 		b = a;
